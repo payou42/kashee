@@ -1,4 +1,4 @@
-<template>
+7<template>
   <v-toolbar fixed>
     <v-menu offset-y>
       <v-btn icon slot="activator"><v-icon>menu</v-icon></v-btn>
@@ -9,46 +9,14 @@
       </v-list>
     </v-menu>
     <v-toolbar-title>{{ loaded ? character : "Pas de perso" }}</v-toolbar-title>
-    <a 
-      v-if="loaded"      
-      ref="downloadLink"
-      style="margin-left: 1em; text-decoration: none"
-      href=""
-      :download="file"
-      icon
-      @click="saveCharacter"
-    >
+    <a v-if="loaded" ref="downloadLink" style="margin-left: 1em; text-decoration: none" href="" :download="file" icon @click="saveCharacter">
       <v-icon>cloud_download</v-icon>
     </a>
     <v-spacer></v-spacer>
-    <kashee-jauge 
-      color="red"
-      v-if="loaded"
-      :level="health"
-      @change="changeStat('health', $event)"
-    >
-    </kashee-jauge>
-    <kashee-jauge
-      color="deep-purple"
-      v-if="loaded"
-      :level="sanity"
-      @change="changeStat('sanity', $event)"
-    >
-    </kashee-jauge>
-    <kashee-jauge
-      color="blue"
-      v-if="loaded"
-      :level="magic"
-      @change="changeStat('magic', $event)"
-    >
-    </kashee-jauge>
-    <kashee-jauge
-      color="green"
-      v-if="loaded"
-      :level="luck"
-      @change="changeStat('luck', $event)"
-    >
-    </kashee-jauge>   
+    <kashee-jauge color="red" v-if="loaded" :level="health" @change="changeStat('health', $event)"></kashee-jauge>
+    <kashee-jauge color="deep-purple" v-if="loaded" :level="sanity" @change="changeStat('sanity', $event)"></kashee-jauge>
+    <kashee-jauge color="blue" v-if="loaded" :level="magic" @change="changeStat('magic', $event)"></kashee-jauge>
+    <kashee-jauge color="green" v-if="loaded" :level="luck" @change="changeStat('luck', $event)"></kashee-jauge>   
   </v-toolbar>
 </template>
 
