@@ -15,6 +15,9 @@
           <v-flex xs2 :key="index + '_test'">
             <kashee-dice-roll :name="skill.name" :current="skill.value"></kashee-dice-roll>
           </v-flex>
+          <template v-for="(speciality, index) in skill.specialities">
+            {{speciality.name}}: {{speciality.value}}
+          </template>
         </template>
       </v-layout>
     </v-flex>

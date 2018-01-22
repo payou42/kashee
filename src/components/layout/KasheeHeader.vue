@@ -6,6 +6,9 @@
         <v-list-tile v-for="chara in all" :key="chara.name" @click="loadCharacter(chara.file)">
           <v-list-tile-title class="text-xs-center">{{ chara.name }}</v-list-tile-title>
         </v-list-tile>
+        <v-list-tile @click="newCharacter()">
+          <v-list-tile-title class="text-xs-center">New</v-list-tile-title>
+        </v-list-tile>
       </v-list>
     </v-menu>
     <v-toolbar-title>{{ loaded ? character : "Pas de perso" }}</v-toolbar-title>
@@ -63,6 +66,11 @@ export default {
       const json = require('@/assets/' + file)
       this.$store.dispatch('character/loadCharacter', json)
       this.file = file
+    },
+    newCharacter: function () {
+      const json = require('@/assets/new.json')
+      this.$store.dispatch('character/loadCharacter', json)
+      this.file = null
     },
     saveCharacter: function () {
       this.$refs.downloadLink.href = 'data:application/json;charset=utf-8,' +

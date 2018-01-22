@@ -1,0 +1,112 @@
+{
+  "player": "",
+  "civilStatus": {
+    "firstName": "",
+    "lastName": "",
+    "codeName": "",
+    "job": "",
+    "age": 0,
+    "sex": "",
+    "place": "",
+    "birthDate": "",
+    "birthPlace": "",
+    "hobby": "",
+	  "picture": ""
+  },
+  "profil": {
+    "ideology": "",
+    "people": [],
+    "goods": [],
+    "traits": [],
+    "phobias": []
+  },
+  "specs": {
+    "for": { "name": "Force", "value": 0 },
+    "dex": { "name": "Dexterité", "value": 0 },
+    "pou": { "name": "Pouvoir", "value": 0 },
+    "con": { "name": "Constitution", "value": 0 },
+    "app": { "name": "Apparence", "value": 0 },
+    "edu": { "name": "Education", "value": 0 },
+    "tai": { "name": "Taille", "value": 0 },
+    "int": { "name": "Intelligence", "value": 0 }
+  },
+  "stats": {
+    "health": { "name": "Vie", "current": 0, "max": 0 },
+    "magic": { "name": "Magie", "current": 0, "max": 0 },
+    "luck": { "name": "Chance", "current": 0, "max": 99, "initial": 0 },
+    "sanity": { "name": "Santé mentale", "current": 0, "max": 99, "initial": 0 },
+    "madnesses": { "name": "Folies", "temporary": 0, "permanent": 0 },
+    "wounds": { "name": "Blessures", "current": 0 },
+    "movment": { "name": "Mouvement", "current": 0 },
+    "shoulders": { "name": "Carrure", "current": 0 },
+    "impact": { "name": "Impact", "current": 0 }
+  },
+  "skills": [
+    { "name": "Arts et Métiers", "group": "Savoir-faire", "value": 0, "main": false, "specialities": [] },
+    { "name": "Comptabilité", "group": "Savoir-faire", "value": 0, "main": false },
+    { "name": "Conduite", "group": "Savoir-faire", "value": 0, "main": false },
+    { "name": "Conduite d'engin", "group": "Savoir-faire", "value": 0 , "main": false },
+    { "name": "Électricité", "group": "Savoir-faire", "value": 0, "main": false },
+    { "name": "Électronique", "group": "Savoir-faire", "value": 0, "main": false },
+    { "name": "Informatique", "group": "Savoir-faire", "value": 0, "main": false },
+    { "name": "Mécanique", "group": "Savoir-faire", "value": 0, "main": false },
+    { "name": "Pilotage", "group": "Savoir-faire", "value": 0, "main": false, "specialities": [] },
+    { "name": "Anthropologie", "group": "Culture", "value": 0, "main": false },
+    { "name": "Archéologie", "group": "Culture", "value": 0, "main": false },
+    { "name": "Droit", "group": "Culture", "value": 0, "main": false },
+    { "name": "Bibliothèque", "group": "Culture", "value": 0, "main": false },
+    { "name": "Estimation", "group": "Culture", "value": 0, "main": false },
+    { "name": "Naturalisme", "group": "Culture", "value": 0, "main": false },
+    { "name": "Occultisme", "group": "Culture", "value": 0, "main": false },
+    { "name": "Histoire", "group": "Culture", "value": 0, "main": false },
+    { "name": "Baratin", "group": "Social", "value": 0, "main": false },
+    { "name": "Charme", "group": "Social", "value": 0, "main": false },
+    { "name": "Crédit", "group": "Social", "value": 0, "main": false },
+    { "name": "Imposture", "group": "Social", "value": 0, "main": false },
+    { "name": "Intimidation", "group": "Social", "value": 0, "main": false },
+    { "name": "Persuasion", "group": "Social", "value": 0, "main": false },
+    { "name": "Premiers Secours", "group": "Médecine", "value": 0, "main": false },
+    { "name": "Médecine", "group": "Médecine", "value": 0, "main": false },
+    { "name": "Psychanalyse", "group": "Médecine", "value": 0, "main": false },
+    { "name": "Psychologie", "group": "Médecine", "value": 0, "main": false },
+
+    { "name": "Sciene", "group": "Culture", "base": 1, "main": false, "specialities":[
+      { "name": "Biologie", "value": 0, "main": false },
+      { "name": "Pharmacologie", "value": 0, "main": false }      
+    ] },
+
+    { "name": "Discrétion", "group": "Furtivité", "value": 0, "main": false },
+    { "name": "Écouter", "group": "Furtivité", "value": 0, "main": false },
+    { "name": "Pickpocket", "group": "Furtivité", "value": 0, "main": false },
+    { "name": "Crochetage", "group": "Furtivité", "value": 0, "main": false },
+    { "name": "Trouver objet caché", "group": "Furtivité", "value": 0, "main": false },
+
+    { "name": "Combat à distance", "group": "Combat", "main": false, "specialities":[
+      { "name": "Armes de poing", "group": "Combat", "base": 20, "value": 0, "main": false },
+      { "name": "Fusils", "group": "Combat", "base": 25, "value": 0, "main": false }
+    ]},
+    { "name": "Combat rapproché", "group": "Combat", "value": 0, "main": false, "specialities":[
+      { "name": "Corps à corps", "group": "Combat", "value": 0, "main": false }
+    ] },
+
+    { "name": "Esquive", "group": "Combat", "value": 0, "main": false },
+    { "name": "Survie", "group": "Survie", "value": 0, "main": false },
+    { "name": "Orientation", "group": "Survie", "value": 0, "main": false },
+    { "name": "Pister", "group": "Survie", "value": 0, "main": false },
+
+    { "name": "Langue", "group": "Langue", "base": 1, "main": false, "specialities":[
+      { "name": "Anglais", "value": 0, "main": false },
+      { "name": "Suédois", "value": 0, "main": false },
+      { "name": "Latin", "value": 0, "main": false },
+      { "name": "Morse", "value": 0, "main": false }
+    ] },
+
+    { "name": "Équitation", "group": "Physique", "value": 0, "main": false },
+    { "name": "Nager", "group": "Physique", "value": 0, "main": false },
+    { "name": "Grimper", "group": "Physique", "value": 0, "main": false },
+    { "name": "Lancer", "group": "Physique", "value": 0, "main": false },
+    { "name": "Plongée", "group": "Physique", "value": 0, "main": false },
+    { "name": "Sauter", "group": "Physique", "value": 0, "main": false },
+    { "name": "Mythe de Cthulhu", "group": "Surnaturel", "value": 0, "main": false }
+  ]
+}
