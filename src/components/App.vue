@@ -1,15 +1,21 @@
 <template>
-  <v-app light>
-    <kashee-nav></kashee-nav>
+  <v-app id="app" light>
     <kashee-header></kashee-header>
-    <main>
-      <v-container fluid>
-        <v-slide-y-transition mode="out-in">
-          <router-view></router-view>
-        </v-slide-y-transition>
-      </v-container>
-      <kashee-message></kashee-message>
-    </main>    
+    <v-layout class="mt-1" >
+      <v-flex>
+        <kashee-nav></kashee-nav>
+      </v-flex>
+      <v-flex>
+        <main>
+          <v-container fluid>
+            <v-slide-y-transition mode="out-in">
+              <router-view></router-view>
+            </v-slide-y-transition>
+          </v-container>
+          <kashee-message></kashee-message>
+        </main>
+      </v-flex>  
+    </v-layout> 
   </v-app>
 </template>
 

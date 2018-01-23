@@ -4,7 +4,7 @@
       <p class="text-xs-center"><strong>{{ title }}</strong></p>
     </v-flex>
     <v-flex xs12 v-if="skills">
-      <v-layout row wrap class="ma-0 pa-0">
+      <v-layout row wrap justify-end class="ma-0 pa-0">
         <template v-for="(skill, index) in skills">
           <v-flex xs8 :key="index + '_name'" class="mt-1">
             <code>{{ skill.name }}</code>
@@ -15,6 +15,19 @@
           <v-flex xs2 :key="index + '_test'">
             <kashee-dice-roll :name="skill.name" :current="skill.value"></kashee-dice-roll>
           </v-flex>
+          <template v-if="speciality" v-for="(speciality) in skill.specialities">
+            <!-- {{speciality.name}}: {{speciality.value}} -->
+            <v-flex xs1 :key="speciality.name +'_spacer'" ></v-flex>
+            <v-flex xs7 :key="speciality.name + '_name_spec'" class="mt-1">
+              <code>{{ speciality.name }}</code>
+            </v-flex>
+            <v-flex xs2 :key="speciality.name + '_value_spec'" class="mt-1">
+              <code><strong>{{ speciality.value }}</strong></code>
+            </v-flex>
+            <v-flex xs2 :key="speciality.name + '_test'">
+              <kashee-dice-roll :name="speciality.name" :current="speciality.value"></kashee-dice-roll>
+            </v-flex>
+          </template>
         </template>
       </v-layout>
     </v-flex>
