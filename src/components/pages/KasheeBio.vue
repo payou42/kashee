@@ -1,10 +1,10 @@
 <template>
   <v-layout row fluid wrap>
-    <v-flex xs6>
+    <v-flex md6 xs12>
       <kashee-civil-status :width="600"></kashee-civil-status>
       <kashee-traits :width="600"></kashee-traits>
     </v-flex>
-    <v-flex xs6>
+    <v-flex md6 xs12>
       <kashee-specs :width="600" class="mb-4"></kashee-specs>
       <kashee-stats :width="600"></kashee-stats>      
     </v-flex>

@@ -1,5 +1,5 @@
 <template>
-  <v-layout row wrap fluid v-bind:style="{ width: width + 'px' }">
+  <v-layout row wrap fluid v-bind:style="{ 'max-width': width + 'px' }">
     <v-flex xs12>
       <p class="text-xs-center"><strong>~ Caractéristiques ~</strong></p>
     </v-flex>

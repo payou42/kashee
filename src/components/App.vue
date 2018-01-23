@@ -7,7 +7,7 @@
       </v-flex>
       <v-flex>
         <main>
-          <v-container fluid>
+          <v-container>
             <v-slide-y-transition mode="out-in">
               <router-view></router-view>
             </v-slide-y-transition>
@@ -41,7 +41,8 @@ export default {
 
   .application main .container
     min-height auto
-    height auto
+    height calc(100vh - 66px)
+    overflow auto
 
   code
     font-family 'Handlee', cursive

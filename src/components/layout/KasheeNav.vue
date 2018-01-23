@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer>
+  <v-navigation-drawer permanent >
     <v-list>
       <v-list-tile value="true" v-for="(item, i) in items" :key="i" :to="item.path">
         <v-list-tile-action>

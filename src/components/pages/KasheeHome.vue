@@ -1,14 +1,14 @@
 <template>
   <v-layout row fluid wrap>
-    <v-flex xs4>
+    <v-flex md4 xs12>
       <kashee-civil-status :width="400"></kashee-civil-status>
       <kashee-traits :width="400"></kashee-traits>
     </v-flex>
-    <v-flex xs4>
+    <v-flex md4 xs12>
       <kashee-stats :width="400"></kashee-stats>
       <kashee-specs :width="400"></kashee-specs>
     </v-flex>
-    <v-flex xs4>
+    <v-flex md4 xs12>
       <kashee-skills :width="400" what="main"></kashee-skills>
     </v-flex>
   </v-layout>
