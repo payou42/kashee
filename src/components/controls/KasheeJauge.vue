@@ -9,10 +9,10 @@
       <v-progress-linear 
         :value="percent"
         :height="height"
-        :color-front="color + ' darken-1'"
-        :color-back="color + ' lighten-3'"
+        :color="color + ' darken-1'"
+        :background-color="color + ' lighten-3'"
         v-bind:style="{ 'border-radius': round + 'px' }"
-        style="margin-top: 0px"
+        class="mt-0"
       >
       </v-progress-linear>
     </div>

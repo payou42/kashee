@@ -49,6 +49,7 @@ export default {
     font-size 1em
     background-color #fafafa
     color black
+    box-shadow none
 
   code strong
     font-weight 600 !important

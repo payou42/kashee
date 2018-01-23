@@ -11,25 +11,25 @@
         <v-flex xs12 class="mt-2">
           <code>Personnes importantes: </code>
         </v-flex>
-        <v-flex xs12 class="ml-4" v-for="(people, index) in traits.people" :key="index">
+        <v-flex xs12 class="ml-4" v-for="(people, index) in traits.people" :key="'people-' + index">
           <code>- {{ people }}</code>
         </v-flex>
         <v-flex xs12 class="mt-2">
           <code>Biens importants: </code>
         </v-flex>
-        <v-flex xs12 class="ml-4" v-for="(good, index) in traits.goods" :key="index">
+        <v-flex xs12 class="ml-4" v-for="(good, index) in traits.goods" :key="'goods-' + index">
           <code>- {{ good }}</code>
         </v-flex>
         <v-flex xs12 class="mt-2">
           <code>Traits: </code>
         </v-flex>
-        <v-flex xs12 class="ml-4" v-for="(trait, index) in traits.traits" :key="index">
+        <v-flex xs12 class="ml-4" v-for="(trait, index) in traits.traits" :key="'traits-' + index">
           <code>- {{ trait }}</code>
         </v-flex>
         <v-flex xs12 class="mt-2">
           <code>Phobies: </code>
         </v-flex>
-        <v-flex xs12 class="ml-4" v-for="(phobia, index) in traits.phobias" :key="index">
+        <v-flex xs12 class="ml-4" v-for="(phobia, index) in traits.phobias" :key="'phobias-' + index">
           <code>- {{ phobia }}</code>
         </v-flex>
         <v-flex xs12 class="mt-2"></v-flex>
