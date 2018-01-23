@@ -21,23 +21,7 @@
     <kashee-jauge color="blue" v-if="loaded" :level="magic" @change="changeStat('magic', $event)"></kashee-jauge>
     <kashee-jauge color="green" v-if="loaded" :level="luck" @change="changeStat('luck', $event)"></kashee-jauge>   
     <v-dialog v-model="welcomeDialog">
-      <v-card>
-        <v-card-title>Choose your character</v-card-title>
-        <v-card-text>
-          <v-radio-group v-model="selectedChar">
-            <v-radio
-              v-for="(chara, index) in all"
-              :key="index"
-              :label="chara.name"
-              :value="chara.file"
-            ></v-radio>
-          </v-radio-group>
-          <v-layout flex row >
-            <v-btn :enabled="selectedChar" @click.stop="loadCharacter(selectedChar)" >Open character</v-btn>
-            <v-btn>Start wizard editor</v-btn>
-          </v-layout>
-        </v-card-text>
-      </v-card>
+      <kashee-welcome-wizard :all-characters="all" @load="loadCharacter" ></kashee-welcome-wizard>
     </v-dialog>
   </v-toolbar>
 </template>
@@ -45,15 +29,16 @@
 <script>
 import Characters from '@/assets/characters'
 import KasheeJauge from '@/components/controls/KasheeJauge.vue'
+import KasheeWelcomeWizard from '@/components/controls/KasheeWelcomeWizard.vue'
 
 export default {
   name: 'kashee-header',
   components: {
-    KasheeJauge
+    KasheeJauge,
+    KasheeWelcomeWizard
   },
   data () {
     return {
-      selectedChar: null,
       file: null,
       welcomeDialog: true
     }
