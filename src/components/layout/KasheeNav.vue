@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer persistent permanent clipped>
+  <v-navigation-drawer>
     <v-list>
       <v-list-tile value="true" v-for="(item, i) in items" :key="i" :to="item.path">
         <v-list-tile-action>
@@ -20,8 +20,8 @@ export default {
     return {
       items: [
         { icon: 'home', title: 'Résumé', path: '/' },
-        { icon: 'face', title: 'Bio', path: '/bio' },
-        { icon: 'list', title: 'Stats', path: '/stats' },
+        { icon: 'face', title: 'Bio & caractéristiques', path: '/bio' },
+        { icon: 'list', title: 'Compétences', path: '/stats' },
         { icon: 'build', title: 'Inventaire', path: '/inventory' },
         { icon: 'people', title: 'Contacts', path: '/people' },
         { icon: 'assignment', title: 'Notes', path: '/notes' }

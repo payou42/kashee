@@ -70,7 +70,7 @@
     { "name": "Psychanalyse", "group": "Médecine", "value": 0, "main": false },
     { "name": "Psychologie", "group": "Médecine", "value": 0, "main": false },
 
-    { "name": "Sciene", "group": "Culture", "base": 1, "main": false, "specialities":[
+    { "name": "Science", "group": "Culture", "base": 1, "main": false, "specialities":[
       { "name": "Biologie", "value": 0, "main": false },
       { "name": "Pharmacologie", "value": 0, "main": false }      
     ] },
@@ -94,7 +94,7 @@
     { "name": "Orientation", "group": "Survie", "value": 0, "main": false },
     { "name": "Pister", "group": "Survie", "value": 0, "main": false },
 
-    { "name": "Langue", "group": "Langue", "base": 1, "main": false, "specialities":[
+    { "name": "Langue", "group": "Langues", "base": 1, "main": false, "specialities":[
       { "name": "Anglais", "value": 0, "main": false },
       { "name": "Suédois", "value": 0, "main": false },
       { "name": "Latin", "value": 0, "main": false },
