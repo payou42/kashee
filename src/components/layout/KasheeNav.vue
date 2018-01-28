@@ -24,7 +24,8 @@ export default {
         { icon: 'list', title: 'Compétences', path: '/stats' },
         { icon: 'build', title: 'Inventaire', path: '/inventory' },
         { icon: 'people', title: 'Contacts', path: '/people' },
-        { icon: 'assignment', title: 'Notes', path: '/notes' }
+        { icon: 'assignment', title: 'Notes', path: '/notes' },
+        { icon: 'edit', title: 'Assistant de création', path: '/creation-wizard' }
       ]
     }
   }

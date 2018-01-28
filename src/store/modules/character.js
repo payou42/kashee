@@ -9,6 +9,12 @@ export default {
     },
     changeStat (state, params) {
       state.current.stats[params.stat].current = params.value
+    },
+    update (state, params) {
+      state.current = {
+        ...state.current,
+        ...params
+      }
     }
   },
   actions: {
@@ -17,6 +23,9 @@ export default {
     },
     changeStat (context, params) {
       context.commit('changeStat', params)
+    },
+    update (context, params) {
+      context.commit('update', params)
     }
   }
 }

@@ -5,7 +5,7 @@
       <v-flex>
         <kashee-nav></kashee-nav>
       </v-flex>
-      <v-flex>
+      <v-flex xs12>
         <main>
           <v-container>
             <v-slide-y-transition mode="out-in">

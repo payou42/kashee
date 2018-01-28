@@ -21,7 +21,7 @@
     <kashee-jauge color="blue" v-if="loaded" :level="magic" @change="changeStat('magic', $event)"></kashee-jauge>
     <kashee-jauge color="green" v-if="loaded" :level="luck" @change="changeStat('luck', $event)"></kashee-jauge>   
     <v-dialog v-model="welcomeDialog">
-      <kashee-welcome-wizard :all-characters="all" @load="loadCharacter" ></kashee-welcome-wizard>
+      <kashee-welcome-wizard :all-characters="all" @load="loadCharacter" @wizard="launchWizard" ></kashee-welcome-wizard>
     </v-dialog>
   </v-toolbar>
 </template>
@@ -29,7 +29,7 @@
 <script>
 import Characters from '@/assets/characters'
 import KasheeJauge from '@/components/controls/KasheeJauge.vue'
-import KasheeWelcomeWizard from '@/components/controls/KasheeWelcomeWizard.vue'
+import KasheeWelcomeWizard from '@/components/controls/creation/KasheeWelcomeWizard.vue'
 
 export default {
   name: 'kashee-header',
@@ -53,7 +53,11 @@ export default {
     character: function () {
       const civil = this.$store.state.character.current.civilStatus
       if (civil.firstName || civil.codeName || civil.lastName) {
-        return civil.firstName + ' "' + civil.codeName + '" ' + civil.lastName
+        let characterFullName = ''
+        characterFullName += civil.firstName ? `${civil.firstName} ` : ''
+        characterFullName += civil.codeName ? `"${civil.codeName}" ` : ''
+        characterFullName += civil.lastName ? `${civil.lastName} ` : ''
+        return characterFullName
       } else {
         return '[New character]'
       }
@@ -74,9 +78,14 @@ export default {
   methods: {
     loadCharacter: function (file) {
       const json = require('@/assets/' + file)
-      this.$store.dispatch('character/loadCharacter', json)
       this.file = file
       this.welcomeDialog = false
+      return this.$store.dispatch('character/loadCharacter', json)
+    },
+    launchWizard: function (file) {
+      this.loadCharacter(file).then(() => {
+        this.$router.push({ path: '/creation-wizard' })
+      })
     },
     newCharacter: function () {
       this.loadCharacter('new.json')

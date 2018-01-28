@@ -12,7 +12,7 @@
           </v-radio-group>
           <v-layout flex row >
             <v-btn :disabled="!selectedChar" @click.stop="loadCharacter(selectedChar)" >Open character</v-btn>
-            <v-btn>Start wizard editor</v-btn>
+            <v-btn :disabled="!selectedChar" @click.stop="startWizard(selectedChar)" >Start wizard editor</v-btn>
           </v-layout>
         </v-card-text>
       </v-card>
@@ -37,6 +37,9 @@ export default {
   methods: {
     loadCharacter: function (character) {
       this.$emit('load', character)
+    },
+    startWizard: function (character) {
+      this.$emit('wizard', character)
     }
   }
 }
