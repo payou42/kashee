@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Identité de l'investigateur</h4>
+    <h3>Identité de l'investigateur</h3>
     <v-layout row wrap>
       <v-flex class="pa-2" md4 xs6>
         <v-text-field label="Prénom" v-model="firstName" hide-details ></v-text-field>

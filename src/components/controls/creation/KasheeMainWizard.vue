@@ -6,8 +6,8 @@
         <v-card class="mb-2 pa-2 grey lighten-3">
           <router-view :name="step.routeName" ></router-view>
         </v-card>
-        <v-btn color="primary" @click.native="wizard++">Continue</v-btn>
-        <v-btn flat>Cancel</v-btn>
+        <v-btn v-if="index < wizardSteps.length - 1" color="primary" @click.native="wizard++">Suivant</v-btn>
+        <v-btn v-if="index > 0" @click.native="wizard--">Précédent</v-btn>
       </v-stepper-content>
     </template>
   </v-stepper>

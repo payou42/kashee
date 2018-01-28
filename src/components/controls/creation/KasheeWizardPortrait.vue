@@ -1,8 +1,12 @@
 <template>
   <div>
-    <h2>Portrait editor</h2>
-    <input ref="localFile" @change="imageSelected" type="file" />
-    <img class="portrait" :src="picture" />
+    <h3>Portrait de l'investigateur</h3>
+    <div>
+      <img class="portrait" :src="picture" />
+    </div>
+    <div>
+      <input ref="localFile" @change="imageSelected" type="file" />
+    </div>
   </div>
 </template>
 <script>
