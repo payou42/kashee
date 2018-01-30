@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3>Caractéristique de l'investigateur</h3>
+    <em>Les caractéristiques sont déterminés au hasard. Les valeurs vont de 15 à 90 pour la première ligne, et de 40 à 90 pour la seconde.</em>
     <v-layout align-end row>
       <v-flex class="pa-1">
         <v-btn @click="populateRollList1" >Tirer les valeurs aux hasard</v-btn>
@@ -53,15 +54,6 @@
       </v-flex>
       <v-flex></v-flex>
     </v-layout>
-    <div>
-      Votre personnage a {{age}} ans.
-    </div>
-    <ul v-if="malusList.length > 0">
-      <li :key="'malus-' + index" v-for="(malus, index) in malusList" >{{malus}}</li>
-    </ul>
-    <div v-else>
-      Pas de malus lié à l'âge de l'investigateur.
-    </div>
   </div>
 </template>
 <script>
@@ -76,12 +68,6 @@ export default {
   },
 
   computed: {
-    age: function () {
-      if (this.$store.state.character.current) {
-        return this.$store.state.character.current.civilStatus.age
-      }
-      return null
-    },
     charac: function () {
       if (this.$store.state.character.current) {
         return this.$store.state.character.current.specs
@@ -218,41 +204,6 @@ export default {
     },
     characList: function () {
       return Object.keys(this.$store.state.character.current.specs)
-    },
-    malusList: function () {
-      if (this.age < 20) {
-        return [
-          'Retirez 5 points entre la FOR et la TAI',
-          'Retirez 5 points en EDU'
-        ]
-      } else if (this.age < 40) {
-        return []
-      } else if (this.age < 50) {
-        return [
-          'Retirez 5 points entre la FOR, la CON et la DEX.',
-          'Retirez 5 points en APP'
-        ]
-      } else if (this.age < 60) {
-        return [
-          'Retirez 10 points entre la FOR, la CON et la DEX.',
-          'Retirez 10 points en APP'
-        ]
-      } else if (this.age < 70) {
-        return [
-          'Retirez 20 points entre la FOR, la CON et la DEX.',
-          'Retirez 15 points en APP'
-        ]
-      } else if (this.age < 80) {
-        return [
-          'Retirez 40 points entre la FOR, la CON et la DEX.',
-          'Retirez 20 points en APP'
-        ]
-      } else {
-        return [
-          'Retirez 80 points entre la FOR, la CON et la DEX.',
-          'Retirez 25 points en APP'
-        ]
-      }
     }
   },
 

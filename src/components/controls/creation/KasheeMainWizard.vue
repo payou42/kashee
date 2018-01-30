@@ -23,6 +23,7 @@ export default {
         {label: 'Biographie', routeName: 'bio'},
         {label: 'Portrait', routeName: 'portrait'},
         {label: 'Caractéristiques', routeName: 'characteristics'},
+        {label: 'Âge', routeName: 'age'},
         {label: 'Valeurs dérivées', routeName: 'otherValues'},
         {label: 'Vitesse de déplacement', routeName: 'move'},
         {label: 'Occupation', routeName: 'occupation'},

@@ -1,11 +1,12 @@
 <template>
   <div>
     <h3>Portrait de l'investigateur</h3>
+    <em>Vous pouvez importer une image JPG ou PNG</em>
     <div>
       <img class="portrait" :src="picture" />
     </div>
     <div>
-      <input ref="localFile" @change="imageSelected" type="file" />
+      <input ref="localFile" @change="imageSelected" type="file" accept="image/*" />
     </div>
   </div>
 </template>

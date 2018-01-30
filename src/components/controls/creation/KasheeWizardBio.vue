@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3>Identité de l'investigateur</h3>
+    <em>Renseignez ici les informations de base de votre investigateur sur son identité</em>
     <v-layout row wrap>
       <v-flex class="pa-2" md4 xs6>
         <v-text-field label="Prénom" v-model="firstName" hide-details ></v-text-field>
@@ -11,9 +12,7 @@
       <v-flex class="pa-2" md4 xs6>
         <v-text-field md4 xs6 label="Nom de code" v-model="codeName"  hide-details></v-text-field>
       </v-flex>
-      <v-flex class="pa-2" md4 xs6>
-        <v-text-field md4 xs6 label="Âge" type="number" v-model.number="age" suffix="ans"  hide-details></v-text-field>
-      </v-flex>
+
       <v-flex class="pa-2" md4 xs6>
         <v-select
           md4 xs6
@@ -82,19 +81,6 @@ export default {
           civilStatus: {
             ...this.civilStatus,
             codeName: value
-          }
-        })
-      }
-    },
-    age: {
-      get: function () {
-        return this.civilStatus.age
-      },
-      set: function (value) {
-        this.$store.dispatch('character/update', {
-          civilStatus: {
-            ...this.civilStatus,
-            age: value
           }
         })
       }
