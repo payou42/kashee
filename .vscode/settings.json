@@ -2,5 +2,22 @@
 {
     "editor.tabSize": 2,
     "editor.detectIndentation": false,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "javascript.validate.enable": false,
+    "standard.enable": true,
+    "files.associations": {
+        "*.vue": "html"
+    },
+    "standard.validate": [
+        "html",
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "html",
+            "autoFix": true
+        }
+    ],
+    "standard.options": {
+        "plugins": ["html"]
+    }
 }
