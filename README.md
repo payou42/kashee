@@ -7,12 +7,14 @@ Character sheets for Call of Cthulhu pen and paper game 7th Edition. Data need t
 ### How to run
 
 You need to install :
+
 1. [Node](https://nodejs.org/en/)
 2. [npm](https://www.npmjs.com/get-npm) (you should already have it with Node) or [yarn](https://yarnpkg.com)
 
 Then :
-* execute `npm install` (or `yarn install`) to install dependencies
-* execute `npm start` (or `yarn start`) to start application
+
+- execute `npm install` (or `yarn install`) to install dependencies
+- execute `npm start` (or `yarn start`) to start application
 
 ### Screenshots
 
@@ -33,12 +35,14 @@ Feuille de personnage pour le jeu de rôle l'Appel de Cthulhu V7. Les données s
 ### lancer l'application
 
 Vous devrez installer:
+
 1. [Node](https://nodejs.org/en/)
 2. [npm](https://www.npmjs.com/get-npm) (fourni avec Node) ou [yarn](https://yarnpkg.com)
 
 Ensuite :
-* executer `npm install` (or `yarn install`) pour installer les dépendences
-* executer `npm start` (or `yarn start`) to lancer l'application
+
+- executer `npm install` (or `yarn install`) pour installer les dépendences
+- executer `npm start` (or `yarn start`) to lancer l'application
 
 ### Capture d'écran
 

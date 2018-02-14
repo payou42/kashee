@@ -25,6 +25,7 @@ import KasheeWizardInventory from '@/components/controls/creation/KasheeWizardIn
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     { path: '/', name: 'Home', component: Home },
     { path: '/bio', name: 'Bio', component: Bio },
