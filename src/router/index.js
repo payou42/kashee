@@ -12,8 +12,7 @@ import KasheeWizardBio from '@/components/controls/creation/KasheeWizardBio'
 import KasheeWizardPortrait from '@/components/controls/creation/KasheeWizardPortrait'
 import KasheeWizardCharacteristics from '@/components/controls/creation/KasheeWizardCharacteristics'
 import KasheeWizardAge from '@/components/controls/creation/KasheeWizardAge'
-import KasheeWizardValues from '@/components/controls/creation/KasheeWizardValues'
-import KasheeWizardMove from '@/components/controls/creation/KasheeWizardMove'
+import KasheeWizardMiscValues from '@/components/controls/creation/KasheeWizardMiscValues'
 import KasheeWizardOccupation from '@/components/controls/creation/KasheeWizardOccupation'
 import KasheeWizardOccupationSkills from '@/components/controls/creation/KasheeWizardOccupationSkills'
 import KasheeWizardPersonnalSkills from '@/components/controls/creation/KasheeWizardPersonnalSkills'
@@ -42,8 +41,7 @@ export default new Router({
             portrait: KasheeWizardPortrait,
             characteristics: KasheeWizardCharacteristics,
             age: KasheeWizardAge,
-            otherValues: KasheeWizardValues,
-            move: KasheeWizardMove,
+            otherValues: KasheeWizardMiscValues,
             occupation: KasheeWizardOccupation,
             skill1: KasheeWizardOccupationSkills,
             skill2: KasheeWizardPersonnalSkills,

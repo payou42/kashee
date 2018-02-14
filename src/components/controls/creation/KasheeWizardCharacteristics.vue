@@ -4,7 +4,7 @@
     <em>Les caractéristiques sont déterminés au hasard. Les valeurs vont de 15 à 90 pour la première ligne, et de 40 à 90 pour la seconde.</em>
     <v-layout align-end row>
       <v-flex class="pa-1">
-        <v-btn @click="populateRollList1" >Tirer les valeurs aux hasard</v-btn>
+        <v-btn v-if="rollList1.length === 0" @click="populateRollList1" >Tirer les valeurs aux hasard</v-btn>
       </v-flex>
       <v-flex class="pa-2" v-if="rollList1.length > 0">
         Nouvelles valeurs tirées:<br/>{{rollList1.join(', ')}}
@@ -33,7 +33,7 @@
     </v-layout>
     <v-layout align-end row>
       <v-flex class="pa-1">
-        <v-btn @click="populateRollList2" >Tirer les valeurs aux hasard</v-btn>
+        <v-btn v-if="rollList2.length === 0" @click="populateRollList2" >Tirer les valeurs aux hasard</v-btn>
       </v-flex>
       <v-flex class="pa-2" v-if="rollList2.length > 0">
         Nouvelles valeurs tirées:<br/>{{rollList2.join(', ')}}

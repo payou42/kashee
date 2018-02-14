@@ -25,7 +25,6 @@ export default {
         {label: 'Caractéristiques', routeName: 'characteristics'},
         {label: 'Âge', routeName: 'age'},
         {label: 'Valeurs dérivées', routeName: 'otherValues'},
-        {label: 'Vitesse de déplacement', routeName: 'move'},
         {label: 'Occupation', routeName: 'occupation'},
         {label: 'Compétences d\'occupation', routeName: 'skill1'},
         {label: 'Compétences d\'intérêt personnel', routeName: 'skill2'},

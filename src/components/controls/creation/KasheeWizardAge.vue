@@ -78,22 +78,26 @@ export default {
       } else if (this.age < 50) {
         return [
           'Retirez 5 points entre la FOR, la CON et la DEX.',
-          'Retirez 5 points en APP'
+          'Retirez 5 points en APP',
+          'Votre mouvement sera réduit de 1'
         ]
       } else if (this.age < 60) {
         return [
           'Retirez 10 points entre la FOR, la CON et la DEX.',
-          'Retirez 10 points en APP'
+          'Retirez 10 points en APP',
+          'Votre mouvement sera réduit de 2'
         ]
       } else if (this.age < 70) {
         return [
           'Retirez 20 points entre la FOR, la CON et la DEX.',
-          'Retirez 15 points en APP'
+          'Retirez 15 points en APP',
+          'Votre mouvement sera réduit de 3'
         ]
       } else if (this.age < 80) {
         return [
           'Retirez 40 points entre la FOR, la CON et la DEX.',
-          'Retirez 20 points en APP'
+          'Retirez 20 points en APP',
+          'Votre mouvement sera réduit de 4'
         ]
       } else {
         return [
